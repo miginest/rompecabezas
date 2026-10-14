@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5f2">
+    <title>Soluciona el rompecabezas</title>
+    <link rel="stylesheet" href="puzzle.css">
+    <script src="puzzle.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="intro">
+        <h1>Soluciona el<br><span>rompecabezas</span></h1>
+        <p class="instructions">
+          Ordena las 36 piezas para reconstruir la imagen. Arrastra una pieza
+          sobre otra para intercambiarlas, o haz clic en dos piezas.
+        </p>
+      </header>
+
+      <section class="puzzle-card" aria-label="Rompecabezas del Pedraforca">
+        <div class="game-bar">
+          <p id="progress" role="status" aria-live="polite">Cargando el rompecabezas…</p>
+          <div class="game-actions">
+            <button id="solution-button" type="button">Dame la solución</button>
+            <button id="shuffle-button" type="button" disabled>Mezclar piezas</button>
+          </div>
+        </div>
+        <div
+          id="puzzle"
+          class="puzzle"
+          role="group"
+          aria-label="Rompecabezas de 6 por 6 piezas"
+          aria-describedby="progress"
+        ></div>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer>
+        Imagen: <a href="https://commons.wikimedia.org/wiki/File:Molinos_de_viento_en_Mota_del_Cuervo.jpg" target="_blank" rel="noreferrer">Molinos de viento en Mota del Cuervo</a>,
+        de Jaime González, recortada por la derecha; licencia
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/es/" target="_blank" rel="noreferrer">CC BY-SA 3.0 ES</a>.
+      </footer>
+    </main>
+  </body>
+</html>
